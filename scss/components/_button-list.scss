@@ -59,9 +59,13 @@
   height: 40px;
   border: 1px solid blue;
   position: relative;
+  @media screen and(min-width:768px) {
+    display: none;
+  }
 }
 .button-menu__menu {
   fill: black;
+  display: none;
 }
 .button-menu__position {
   position: absolute;

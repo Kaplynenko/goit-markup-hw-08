@@ -84,6 +84,13 @@ html {
 }
 
 /* навигация сайта */
+@media screen and (max-width: 767px) {
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .page-header__container-nav {
   margin-left: auto;
   margin-right: auto;
@@ -1372,9 +1379,15 @@ html {
   border: 1px solid blue;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+}
 
 .button-menu__menu {
   fill: black;
+  display: none;
 }
 
 .button-menu__position {

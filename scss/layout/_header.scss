@@ -1,4 +1,9 @@
 /* навигация сайта */
+@media screen and(max-width:767px) {
+  .page-header {
+    display: flex;
+  }
+}
 .page-header__container-nav {
   // width: 1200px;
   margin-left: auto;
