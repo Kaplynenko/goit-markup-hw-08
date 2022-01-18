@@ -1,0 +1,18 @@
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+}
+.footer-logo__logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo--inverse {
+  color: var(--primery-background);
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
