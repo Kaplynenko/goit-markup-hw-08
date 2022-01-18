@@ -54,3 +54,18 @@
 .btn-footer__icon {
   margin-left: 10px;
 }
+.button-menu {
+  width: 40px;
+  height: 40px;
+  border: 1px solid blue;
+  position: relative;
+}
+.button-menu__menu {
+  fill: black;
+}
+.button-menu__position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
