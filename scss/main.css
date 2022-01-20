@@ -1151,12 +1151,8 @@ body {
   .menu-container {
     position: static;
     display: flex;
+    flex-direction: row;
   }
-}
-
-.button-menu {
-  position: absolute;
-  right: 0;
 }
 
 /* ==============backdrop=========== */
