@@ -97,6 +97,7 @@
     width: 101%;
     top: 0;
     left: 0;
+    height: 100vh;
     justify-content: flex-start;
     background-color: white;
     display: none;
@@ -104,6 +105,29 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+    }
+    .main-nav__items {
+      margin-left: 50px;
+    }
+    .main-nav {
+      align-items: flex-start;
+    }
+    .contacts {
+      margin-left: 50px;
+      .contacts__link {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        color: var(--accent-color);
+      }
+      .contacts__mail,
+      .contacts__tel {
+        display: none;
+      }
+      .contacts__img {
+        display: none;
+      }
     }
   }
 }
