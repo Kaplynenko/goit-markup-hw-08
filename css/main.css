@@ -48,6 +48,11 @@ img {
     max-width: 768px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 
 header {
   border-bottom: 1px solid var(--color-border);
@@ -376,11 +381,18 @@ body {
   margin-bottom: 0;
   color: var(--primery-background);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__btn {
@@ -402,6 +414,17 @@ body {
 }
 
 /* ============== метод работы=============== */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .method-work {
   padding-left: 0;
   margin: 0;
@@ -553,6 +576,13 @@ body {
 /* =============Секция наша команда=========== */
 .section.our-team {
   background-color: var(--section-cards);
+  padding-top: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .section.our-team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .our-team__headline-title {
@@ -563,6 +593,13 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+@media screen and (max-width: 1199px) {
+  .our-team__headline-title {
+    font-size: 28px;
+    line-height: 1.18px;
+    margin-bottom: 30px;
+  }
+}
 
 .team-cards__text {
   margin: 0;
@@ -570,6 +607,7 @@ body {
 }
 
 .team-cards {
+  margin: 0;
   padding: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -586,6 +624,11 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .team-cards__img:last-child {
+    margin-bottom: 0;
+  }
+}
 .team-cards__img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,6 +790,12 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+@media screen and (max-width: 1199px) {
+  .clients-icon {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
 .clients-icon__title {
   margin: 0;
@@ -758,6 +807,13 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  color: #212121;
+}
+@media screen and (max-width: 1199px) {
+  .clients-icon__title {
+    font-size: 28px;
+    line-height: 1.18px;
+  }
 }
 
 /* footer */
@@ -1511,6 +1567,17 @@ body {
     letter-spacing: 0.02em;
     color: var(--accent-color);
   }
+  .menu-container .contacts .contacts__link.contacts__link--mail {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+  .menu-container .contacts .contacts__nav:last-child {
+    margin-bottom: 32px;
+  }
   .menu-container .contacts .contacts__mail,
 .menu-container .contacts .contacts__tel {
     display: none;
@@ -1537,6 +1604,11 @@ body {
   padding-right: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-cocial {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .menu-container {
     position: static;

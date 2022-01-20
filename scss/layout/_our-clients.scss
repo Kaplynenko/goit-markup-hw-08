@@ -47,6 +47,10 @@
 .clients-icon {
   padding-top: 94px;
   padding-bottom: 94px;
+  @media screen and(max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .clients-icon__title {
   margin: 0;
@@ -58,4 +62,9 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  color: #212121;
+  @media screen and(max-width: 1199px) {
+    font-size: 28px;
+    line-height: 1.18px;
+  }
 }
