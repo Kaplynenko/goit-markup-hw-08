@@ -58,14 +58,6 @@ header {
   border-bottom: 1px solid var(--color-border);
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03;
-  color: var(--main-content-color);
-  background-color: var(--primery-background);
-}
-
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -76,6 +68,14 @@ html {
 *::before {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03;
+  color: var(--main-content-color);
+  background-color: var(--primery-background);
 }
 
 /* навигация сайта */
@@ -91,6 +91,11 @@ html {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .page-header {
+    width: 480px;
+  }
 }
 
 .page-header__container-nav {
@@ -125,6 +130,22 @@ html {
     width: 1200px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-header__container-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 
 .page-header__nav {
   display: -webkit-box;
@@ -151,6 +172,23 @@ html {
           justify-content: center;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 93px;
+  }
 }
 
 .main-nav__items {
@@ -295,7 +333,6 @@ html {
   background-color: var(--background-hero-footer);
   padding-top: 200px;
   padding-bottom: 200px;
-  max-width: 1600px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
@@ -1349,11 +1386,10 @@ html {
           align-items: center;
 }
 
-.btn-footer__icon {
-  margin-left: 10px;
-}
-
 .button-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1372,45 +1408,42 @@ html {
 .button-menu.is-open .button-menu__menu {
   display: none;
 }
-@media screen and (min-width: 768px) {
-  .button-menu {
-    display: none;
-  }
-}
 
 .button-menu__menu {
   fill: black;
 }
 
-.menu-container {
-  position: absolute;
-  width: 101%;
-  top: 0;
-  left: 0;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  background-color: white;
-  display: none;
+@media screen and (max-width: 767px) {
+  .menu-container {
+    position: absolute;
+    width: 101%;
+    top: 0;
+    left: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: white;
+    display: none;
+  }
+  .menu-container.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
-.menu-container.is-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+@media screen and (min-width: 768px) {
+  .menu-container {
+    position: static;
+    display: block;
+  }
 }
-
-.button-menu {
-  position: absolute;
-  right: 0;
-}
-
 /* ==============backdrop=========== */
 .backdrop.is-hidden {
   opacity: 0;
