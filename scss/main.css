@@ -58,14 +58,6 @@ header {
   border-bottom: 1px solid var(--color-border);
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.03;
-  color: var(--main-content-color);
-  background-color: var(--primery-background);
-}
-
 html {
   box-sizing: border-box;
 }
@@ -74,6 +66,14 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03;
+  color: var(--main-content-color);
+  background-color: var(--primery-background);
 }
 
 /* навигация сайта */
@@ -85,6 +85,11 @@ html {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .page-header {
+    width: 480px;
+  }
 }
 
 .page-header__container-nav {
@@ -115,6 +120,16 @@ html {
     width: 1200px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-header__container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-between;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 
 .page-header__nav {
   display: flex;
@@ -128,6 +143,16 @@ html {
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 93px;
+  }
 }
 
 .main-nav__items {
@@ -1121,6 +1146,12 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    position: static;
+    display: flex;
+  }
 }
 
 .button-menu {
