@@ -1482,6 +1482,9 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .menu-container .main-nav__items {
     margin-left: 50px;
@@ -1493,6 +1496,13 @@ body {
   }
   .menu-container .contacts {
     margin-left: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .menu-container .contacts .contacts__link {
     font-weight: 500;
@@ -1509,6 +1519,24 @@ body {
     display: none;
   }
 }
+.menu-cocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu-cocial .menu-cocial__icon:not(:first-child) {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+.menu-cocial .menu-cocial__icon {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--accent-color);
+  letter-spacing: 0.02em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .menu-container {
     position: static;
