@@ -1578,7 +1578,6 @@ body {
             justify-content: flex-start;
     background-color: white;
     display: none;
-    z-index: 1;
   }
   .menu-container.is-open {
     display: -webkit-box;
@@ -1594,9 +1593,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
+    z-index: 1;
   }
   .menu-container .main-nav__items {
     margin-left: 50px;
