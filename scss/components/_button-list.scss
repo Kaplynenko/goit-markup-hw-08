@@ -74,16 +74,13 @@
   width: 40px;
   height: 40px;
   padding: 0;
-  .button-menu__close {
-    display: none;
-  }
+  // .button-menu__close {
+  //   display: none;
+  // }
 
   &.is-open {
     .button-menu__close {
       display: block;
-    }
-    .button-menu__menu {
-      display: none;
     }
   }
 }

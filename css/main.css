@@ -1543,14 +1543,8 @@ body {
   height: 40px;
   padding: 0;
 }
-.button-menu .button-menu__close {
-  display: none;
-}
 .button-menu.is-open .button-menu__close {
   display: block;
-}
-.button-menu.is-open .button-menu__menu {
-  display: none;
 }
 
 .button-menu__menu:focus {
