@@ -1534,9 +1534,9 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border: none;
   background-color: transparent;
   width: 40px;
@@ -1544,13 +1544,13 @@ body {
   padding: 0;
 }
 .button-menu .button-menu__close {
+  display: none;
+}
+.button-menu.is-open .button-menu__close {
   display: block;
 }
 .button-menu.is-open .button-menu__menu {
   display: none;
-}
-.button-menu.is-open.is-open .button-menu__close {
-  display: block;
 }
 
 .button-menu__menu:focus {
@@ -1600,6 +1600,9 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
   }
   .menu-container .main-nav__items {
     margin-left: 50px;
