@@ -46,6 +46,9 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  @media screen and(max-width:767px) {
+    margin-top: 60px;
+  }
 }
 .social-footer__icon-link + .social-footer__icon-link {
   margin-left: 10px;

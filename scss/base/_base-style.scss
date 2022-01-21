@@ -12,7 +12,11 @@ ul {
 img {
   display: block;
 }
-
+.container--portfolio {
+  @media screen and(min-width:480px) and(max-width:767px) {
+    max-width: 480px;
+  }
+}
 .container {
   // width: 1200px;
   margin-left: auto;
