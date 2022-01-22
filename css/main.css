@@ -98,10 +98,15 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 @media screen and (min-width: 480px) {
   .page-header {
@@ -1583,8 +1588,8 @@ body {
 
 .button-menu__cross {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 15px;
+  top: 10px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1602,8 +1607,8 @@ body {
 
 .button-menu {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 15px;
+  top: 10px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1617,22 +1622,24 @@ body {
   display: block;
 }
 
-.button-menu__menu:focus {
+.button-menu__menu {
+  fill: var(--secondary-text-color);
+}
+.button-menu__menu:hover {
   fill: var(--accent-color);
 }
 
-.button-menu__menu,
-.button-menu__close {
+.button-menu__cross {
   fill: black;
-  -webkit-transition: -webkit-transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-property: all;
   transition-property: all;
 }
 
-.button-menu__close:focus {
+.button-menu__cross:focus {
   fill: var(--accent-color);
 }
 

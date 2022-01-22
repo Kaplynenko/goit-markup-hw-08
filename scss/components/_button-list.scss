@@ -66,8 +66,8 @@
 
 .button-menu__cross {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 15px;
+  top: 10px;
   display: inline-flex;
   border: none;
   background-color: transparent;
@@ -80,8 +80,8 @@
 }
 .button-menu {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 15px;
+  top: 10px;
   display: inline-flex;
   border: none;
   background-color: transparent;
@@ -96,16 +96,19 @@
   }
 }
 
-.button-menu__menu:focus {
-  fill: var(--accent-color);
+.button-menu__menu {
+  fill: var(--secondary-text-color);
+  &:hover {
+    fill: var(--accent-color);
+  }
 }
-.button-menu__menu,
-.button-menu__close {
+
+.button-menu__cross {
   fill: black;
-  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: all;
 }
-.button-menu__close:focus {
+.button-menu__cross:focus {
   fill: var(--accent-color);
 }
 
