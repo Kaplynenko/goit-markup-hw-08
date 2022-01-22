@@ -1581,6 +1581,20 @@ body {
   }
 }
 
+.button-menu__cross {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
 .button-menu {
   position: absolute;
   right: 0;
