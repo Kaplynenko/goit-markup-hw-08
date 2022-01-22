@@ -63,6 +63,7 @@
     margin-top: 20px;
   }
 }
+
 .button-menu__cross {
   position: absolute;
   right: 0;
@@ -73,6 +74,9 @@
   width: 40px;
   height: 40px;
   padding: 0;
+  @media screen and(min-width:768px) {
+    display: none;
+  }
 }
 .button-menu {
   position: absolute;
