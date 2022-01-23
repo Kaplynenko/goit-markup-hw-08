@@ -84,7 +84,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  letter-spacing: 0.03;
+  letter-spacing: 0.03em;
   color: var(--main-content-color);
   background-color: var(--primery-background);
 }
@@ -113,6 +113,24 @@ body {
     width: 480px;
   }
 }
+@media screen and (min-width: 768px) {
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 @media screen and (max-width: 767px) {
   .page-header {
     -webkit-box-pack: start;
@@ -134,22 +152,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .page-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -333,6 +335,11 @@ body {
   line-height: 1.14;
   font-weight: 500;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__nav {
+    margin-bottom: 10px;
+  }
 }
 
 .contacts__nav:last-child {
@@ -1642,7 +1649,7 @@ body {
   fill: var(--accent-color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 449px) {
   .menu-container {
     position: fixed;
     width: 101%;
@@ -1672,6 +1679,105 @@ body {
             justify-content: space-between;
     z-index: 1;
     pointer-events: visible;
+    height: 100%;
+  }
+  .menu-container .main-nav__items {
+    margin-left: 0;
+  }
+  .menu-container .main-nav {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .menu-container .contacts {
+    margin-left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .menu-container .contacts .contacts__link {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+  .menu-container .contacts .contacts__link.contacts__link--mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+  .menu-container .contacts .contacts__nav {
+    margin-bottom: 10px;
+  }
+  .menu-container .contacts .contacts__nav:last-child {
+    margin-bottom: 32px;
+  }
+  .menu-container .contacts .contacts__mail,
+.menu-container .contacts .contacts__tel {
+    display: none;
+  }
+  .menu-container .contacts .contacts__img {
+    display: none;
+  }
+
+  .menu-cocial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 48px;
+    padding: 0;
+  }
+  .menu-cocial .menu-cocial__icon:not(:first-child) {
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .menu-cocial .menu-cocial__icon {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--accent-color);
+    letter-spacing: 0.02em;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 767px) {
+  .menu-container {
+    position: fixed;
+    width: 101%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: white;
+    display: none;
+    pointer-events: none;
+  }
+  .menu-container.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 1;
+    pointer-events: visible;
+    height: 100%;
   }
   .menu-container .main-nav__items {
     margin-left: 50px;
@@ -1699,12 +1805,14 @@ body {
     color: var(--accent-color);
   }
   .menu-container .contacts .contacts__link.contacts__link--mail {
-    font-family: Roboto;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.02em;
     color: #757575;
+  }
+  .menu-container .contacts .contacts__nav {
+    margin-bottom: 10px;
   }
   .menu-container .contacts .contacts__nav:last-child {
     margin-bottom: 32px;
@@ -1716,26 +1824,26 @@ body {
   .menu-container .contacts .contacts__img {
     display: none;
   }
-}
-.menu-cocial {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 48px;
-}
-.menu-cocial .menu-cocial__icon:not(:first-child) {
-  border-left: 1px solid rgba(33, 33, 33, 0.2);
-}
-.menu-cocial .menu-cocial__icon {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: var(--accent-color);
-  letter-spacing: 0.02em;
-  padding-left: 10px;
-  padding-right: 10px;
-}
 
+  .menu-cocial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 48px;
+  }
+  .menu-cocial .menu-cocial__icon:not(:first-child) {
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .menu-cocial .menu-cocial__icon {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--accent-color);
+    letter-spacing: 0.02em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 @media screen and (min-width: 768px) {
   .menu-cocial {
     display: none;

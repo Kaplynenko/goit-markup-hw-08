@@ -2,12 +2,14 @@
   const mobileMenu = document.querySelector('[data-menu]');
   const openMenuBtn = document.querySelector('[data-menu-open]');
   const closeMenuBtn = document.querySelector('[data-menu-close]');
-
+  const closePort = document.querySelector('[data-port]');
+  
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
+    closePort.classList.toggle('port')
 
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
